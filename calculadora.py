@@ -21,14 +21,6 @@ def restar():
     except ValueError:
         resultado_label.config(text="Error: entrada inválida")
 
-    
-def multiplicar():
-    try:
-        res = float(entrada1.get()) * float(entrada2.get())
-        resultado_label.config(text=f"Resultado: {formatear_resultado(res)}")
-    except ValueError:
-        resultado_label.config(text="Error: entrada inválida")
-
 
 def dividir():
     try:
@@ -59,7 +51,6 @@ entrada2.pack()
 
 tk.Button(ventana, text="Sumar", command=sumar).pack(pady=5)
 tk.Button(ventana, text="Restar", command=restar).pack(pady=5)
-tk.Button(ventana, text="Multiplicar", command=multiplicar).pack(pady=5)
 tk.Button(ventana, text="Dividir", command=dividir).pack(pady=5)
 
 resultado_label = tk.Label(ventana, text="Resultado:", font=("Arial", 14))
